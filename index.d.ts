@@ -7,15 +7,22 @@ export interface ChannelEventMap {
 
 export interface Options {
     activityTimeout?: number;
-    authorizer?: string;
     cluster?: string;
     encrypted?: boolean;
     host?: string;
-    pongTimeout?: string;
-    wsPort?: number;
-    wssPort?: number;
+    pongTimeout?: number;
+    port?: number;
     autoReconnect?: boolean;
     authEndpoint?: string;
+    authorizer?: (channel: any, options: any) => {
+        authorize: (socketId: any, callback: any) => void;
+    };
+    wsPort?: number;
+    wssPort?: number;
+    auth?: {
+        headers?: Object;
+        params?: Object;
+    };
 }
 
 export enum ConnectionStatus {

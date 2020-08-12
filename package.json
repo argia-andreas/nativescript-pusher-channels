@@ -1,56 +1,82 @@
 {
+  "_from": "@nativescript-pusher/channels",
+  "_id": "@nativescript-pusher/channels@2.0.0-alpha.2",
+  "_inBundle": false,
+  "_integrity": "sha512-QUZqAkex27TPlRurlIyKwrA7XPldSIFSzr2nVMD8+9fh8OFHFFjFKmo9kTBl7FoeGm6M8mx0QR5U3rF1c6kDNg==",
+  "_location": "/@nativescript-pusher/channels",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@nativescript-pusher/channels",
     "name": "@nativescript-pusher/channels",
-    "version": "2.0.0-alpha.2",
-    "description": "Pusher Channels client for NativeScript",
-    "main": "pusher",
-    "typings": "index.d.ts",
-    "nativescript": {
-        "platforms": {
-            "android": "3.0.0",
-            "ios": "3.0.0"
-        }
-    },
-    "scripts": {
-        "tsc": "npm i && tsc",
-        "build": "npm run tsc",
-        "build.native": "node scripts/build-native.js",
-        "postclone": "npm i && node scripts/postclone.js",
-        "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
-        "plugin.tscwatch": "npm run tsc -- -w",
-        "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
-        "clean": "rimraf node_modules package-lock.json"
-    },
-    "keywords": [
-        "NativeScript",
-        "JavaScript",
-        "Android",
-        "iOS"
-    ],
-    "author": {
-        "name": "Osei Fortune",
-        "email": "fortune.osei@yahoo.com"
-    },
-    "contributors": [
-        {
-            "name": "Nathan Walker",
-            "url": "https://github.com/NathanWalker"
-        }
-    ],
-    "bugs": {
-        "url": "https://github.com/triniwiz/nativescript-pusher/issues"
-    },
-    "license": "Apache-2.0",
-    "homepage": "https://github.com/triniwiz/nativescript-pusher",
-    "readmeFilename": "README.md",
-    "devDependencies": {
-        "tns-core-modules": "^5.0.0",
-        "tns-platform-declarations": "^5.0.0",
-        "typescript": "~3.3.3",
-        "prompt": "^1.0.0",
-        "rimraf": "^2.6.3",
-        "tslint": "^5.12.1",
-        "semver": "^5.6.0"
-    },
-    "dependencies": {},
-    "bootstrapper": "nativescript-plugin-seed"
+    "escapedName": "@nativescript-pusher%2fchannels",
+    "scope": "@nativescript-pusher",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@nativescript-pusher/channels/-/channels-2.0.0-alpha.2.tgz",
+  "_shasum": "502fc4fb2e627d37b9dc2b9e5ee3ba7b985dcfe6",
+  "_spec": "@nativescript-pusher/channels",
+  "_where": "/Users/andreasgrafstrom/Sites/styrelsemassan-app",
+  "author": {
+    "name": "Osei Fortune",
+    "email": "fortune.osei@yahoo.com"
+  },
+  "bootstrapper": "nativescript-plugin-seed",
+  "bugs": {
+    "url": "https://github.com/triniwiz/nativescript-pusher/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Nathan Walker",
+      "url": "https://github.com/NathanWalker"
+    }
+  ],
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Pusher Channels client for NativeScript",
+  "devDependencies": {
+    "prompt": "^1.0.0",
+    "rimraf": "^2.6.3",
+    "semver": "^5.6.0",
+    "tns-core-modules": "^5.0.0",
+    "tns-platform-declarations": "^5.0.0",
+    "tslint": "^5.12.1",
+    "typescript": "~3.3.3"
+  },
+  "homepage": "https://github.com/triniwiz/nativescript-pusher",
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android",
+    "iOS"
+  ],
+  "license": "Apache-2.0",
+  "main": "pusher",
+  "name": "@nativescript-pusher/channels",
+  "nativescript": {
+    "platforms": {
+      "android": "3.0.0",
+      "ios": "3.0.0"
+    }
+  },
+  "scripts": {
+    "build": "npm run tsc",
+    "build.native": "node scripts/build-native.js",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
+    "clean": "rimraf node_modules package-lock.json",
+    "plugin.tscwatch": "npm run tsc -- -w",
+    "postclone": "npm i && node scripts/postclone.js",
+    "tsc": "npm i && tsc",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\""
+  },
+  "typings": "index.d.ts",
+  "version": "2.0.0-alpha.2"
 }

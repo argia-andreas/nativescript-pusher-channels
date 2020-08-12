@@ -20,6 +20,20 @@ var TNSPusher = (function (_super) {
             if (options.authEndpoint) {
                 authEndpoint = OCAuthMethod.alloc().initWithAuthEndpoint(options.authEndpoint);
             }
+
+            if (options.auth) {
+                // const authRequestBuilder = new SimpleTest();
+                // let test = testClass.announce();
+                // console.log(authRequestBuilder);
+                // TODO - Somehow create a authRequestBuilder...
+                //     var authRequestBuilder = '';
+                //     test = MyAuthRequestBuilder.alloc();
+                    // authEndpoint = OCAuthMethod.alloc().initWithAuthRequestBuilder(authRequestBuilder);
+                //     console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@');
+                //     console.log(test);
+                //     console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@');
+            }
+
             if (options.authorizer) {
             }
             var host = OCPusherHost.alloc().init();
@@ -29,8 +43,11 @@ var TNSPusher = (function (_super) {
             if (options.host) {
                 host = OCPusherHost.alloc().initWithHost(options.host);
             }
+
+            
             var opts = PusherClientOptions.alloc().initWithOcAuthMethodAutoReconnectOcHostPortEncryptedActivityTimeout(authEndpoint, !!options.autoReconnect, host, options.port || null, !!options.encrypted, options.activityTimeout || null);
             _this.ios = Pusher.alloc().initWithAppKeyOptions(apiKey, opts);
+            
         }
         else {
             _this.ios = Pusher.alloc().initWithKey(apiKey);
