@@ -24,14 +24,17 @@ var TNSPusher = (function (_super) {
       }
 
       // If we have auth header or params, use AuthRequestBuilder
+      // Pass a headers object like:
+      // {Authorization: "Bearer 12345", Accept: "application/json"}
+      // Or query params: {test: '123'}
       if (options.auth && options.authEndpoint) {
-        var headers_1 = options.auth.headers;
-        var params_1 = options.auth.params;
+        const headers = options.auth.headers;
+        const params = options.auth.params;
 
         var authRequestBuilder = OCMyAuthRequestBuilder.alloc().initWithAuthEndpointAuthHeadersAuthParams(
           options.authEndpoint,
-          headers_1,
-          params_1
+          headers,
+          params
         );
 
         authEndpoint = OCAuthMethod.alloc().initWithAuthRequestBuilder(
