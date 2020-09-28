@@ -33,7 +33,6 @@ var TNSPusher = (function (_super) {
           headers_1,
           params_1
         );
-        console.log(authRequestBuilder);
 
         authEndpoint = OCAuthMethod.alloc().initWithAuthRequestBuilder(
           authRequestBuilder
